@@ -1,0 +1,212 @@
+{
+        "windowTitle": "ZChat IRC",
+        "startupScreen": "plugin-asl",
+        "showAutoComplete": true,
+        "showEmojiPicker": true,
+        "forceShowEmojiPicker": true,
+        "showColorPicker": true,
+        "showSendButton": true,
+        "hide_advanced": true,
+        "kiwiServer": "https://irc.zchat.org/webirc/kiwiirc/",
+        "restricted": true,
+        "theme": "Coffee",
+        "themes": [
+                { "name": "Default", "url": "static/themes/default" },
+                { "name": "Dark", "url": "static/themes/dark" },
+                { "name": "Coffee", "url": "static/themes/coffee" },
+                { "name": "GrayFox", "url": "static/themes/grayfox" },
+                { "name": "Nightswatch", "url": "static/themes/nightswatch" },
+                { "name": "Osprey", "url": "static/themes/osprey" },
+                { "name": "Radioactive", "url": "static/themes/radioactive" },
+                { "name": "Sky", "url": "static/themes/sky" }
+        ],
+        "startupOptions" : {
+                "buffers": { "messageLayout": "modern" },
+                "channel": "#web",
+                "server": "irc.zchat.org",
+                "port": 7966,
+                "tls": true,
+                "direct": true,
+                "showChannel": false,
+                "nick": "",
+                "username": "web",
+                "greetingText": "Hello! Moi!",
+                "infoBackground": "https://www.icegif.com/wp-content/uploads/2022/08/icegif-878.gif",
+                "infoContent": "<h3>Welcome, Tervetuloa, Hoş geldiniz, Willkommen !</h3>"
+                },
+"buffers": {
+        "show_hostnames": false,
+        "show_joinparts": false,
+        "share_typing": true,
+        "nicklist_avatars": true,
+        "show_nick_changes": true,
+        "show_topics": true,
+        "show_arrowdown_button": true,
+        "noticeActiveBuffer": true,
+        "traffic_as_activity": true,
+	"coloured_nicklist": true,
+	"show_topic_in_header": true,
+	"show_message_info": true,
+        "colour_nicknames_in_messages": true, 
+       "shared_input": true,
+	"share_typing": true,
+	"scrollback_size": "250",
+        "default_ban_mask": "*!*@%h",
+        "messageLayout": "modern"
+    },
+    "embedly": {
+        "key": ""
+    },
+ "plugins": [
+        {"name": "radio", "url": "/static/plugins/plugin-radio.html" },
+        {"name": "nickserv", "url": "/static/plugins/plugin-nickserv.js"},
+        {"name": "plugin-tictactoe", "url": "/static/plugins/plugin-tictactoe.js"},
+        {"name": "avatar-upload", "url": "/static/plugins/plugin-avatar-upload.js"},
+        {"name": "avatars", "url": "/static/plugins/plugin-avatars.js"},
+        {"name": "avatars-micah", "url": "/static/plugins/plugin-avatars/micah.js"},
+        {"name": "asl", "url": "/static/plugins/plugin-asl.js"},
+        {"name": "modern", "url": "/static/plugins/best-layout.js"},
+        {"name": "plugin-mobile-keepalive", "url": "/static/plugins/plugin-mobile-keepalive.html"},
+        {"name": "plugin-giphy", "url": "/static/plugins/plugin-giphy.html"},
+        {"name": "plugin-auto-dark", "url": "/static/plugins/plugin-auto-dark.js"},
+        {"name": "plugin-custom-startup-asl", "url": "/static/plugins/plugin-custom-menu.js"},
+        {"name": "plugin-blockpm", "url": "/static/plugins/plugin-blockpm.html"},
+        {"name": "plugin-imgur", "url": "/static/plugins/plugin-imgur.html"},
+        {"name": "plugin-blocksound", "url": "/static/plugins/plugin-blocksound.html"},
+        {"name": "conference", "url": "static/plugins/plugin-conference.js"},
+        {"name": "ball", "url": "static/plugins/ball.html"},
+        {"name": "fon", "url": "static/plugins/font_size.html"},
+        {"name": "side", "url": "static/plugins/plugin-sidebar-left.html"},
+        {"name": "dark", "url": "static/plugins/darkmode.html"},
+    ],
+"conference": {
+    "secure": false,
+    "server": "jitsi1.geeksec.de/",
+    "queries": true,
+    "channels": true,
+    "buttonIcon": "fa-phone",
+    "viewHeight": "40%",
+    "enabledInChannels": ["*"],
+    "groupInvitesTTL": 30000,
+    "maxParticipantsLength": 60,
+    "participantsMore": "more...",
+    "inviteText": "{{ nick }} is inviting you to a private call.",
+    "joinText": "{{ nick }} has joined the conference.",
+    "joinButtonText": "Join now!",
+    "showLink": false,
+    "useLinkShortener": false,
+    "linkShortenerURL": "https://x0.no/api/?{{ link }}",
+    "linkShortenerAPIToken": "API_KEY_HERE",
+    "interfaceConfigOverwrite": {
+        "SHOW_JITSI_WATERMARK": false,
+        "SHOW_WATERMARK_FOR_GUESTS": false,
+        "TOOLBAR_BUTTONS": [
+            "microphone", "camera", "fullscreen", "hangup",
+            "settings", "videoquality", "filmstrip", "fodeviceselection",
+            "stats", "shortcuts",
+        ],
+    },
+    "configOverwrite": {
+        "startWithVideoMuted": true,
+        "startWithAudioMuted": true,
+    },
+},
+"plugin-asl" : {
+    "gecosType": 2,
+    "showRealname": true,
+     "userBrowserGlobal": false,
+    "showUserBrowser": true,
+    "userBrowserIcon": "fa-search",
+    "fallbackColour": "default",
+    "singleLineUserbox": true,
+    "singleLineString": {
+        "age": "%a",
+        "sex": "%s",
+        "location": "%l",
+        "separator": " • ",
+    },
+    "allowedAge": {
+        "min": 18,
+        "max": 99
+    },
+    "ageRanges": [
+        { "name": "_all", "value": "all" },
+        { "name": "< 25", "value": "<25" },
+        { "name": "25 - 45", "value": "25-46" },
+        { "name": "> 45", "value": ">45" },
+    ],
+    "sexes": [
+        { "name": "_male", "chars": "M", "colour": "#00F" },
+        { "name": "_female", "chars": "F", "colour": "#F0F" },
+        { "name": "_other", "chars": "O", "colour": "#F00" },
+    ],
+    "queryKeys": {
+        "age": "age",
+        "sex": "sex",
+        "location": "location",
+        "realname": "realname",
+    },
+    "requiredFields": [
+        "age",
+        "sex",
+        "location",
+    ],
+},
+"plugin-radio": {
+        "url": "/static/plugins/stations.json",
+	// Initial volume for the player (0 to 1)
+    "volume": 0.1,
+
+    // Station names to be starred by default
+    "starred": [],
+
+    // Initially selected station name
+    // if none is set then a random station will be selected on play
+    "active": "1940s Radio",
+
+    // Should the equalizer wave be shown behind the station name
+    "showWave": true,
+
+    // Should the radio start playing soon as the user connects
+    // note: this option does require some user interaction on the page
+    "autoPlay": true,
+
+    // Force the above volume to be set on startup overriding any volume
+    // saved from the last session
+    "forceVolume": true,
+
+    // Reload stations.json when opening the stations browser
+    "reloadOnOpen": false,
+
+     // Force show the close button on stations browser
+    "forceShowClose": true,
+},
+ "plugin-avatar-upload" : {
+    // Url path to api.php
+     "api_url": "https://kiwi.zchat.org/avatars/api.php",
+
+    // Url path to avatar storage directory
+    "avatars_url": "https://kiwi.zchat.org/avatars/",
+
+    // Avatars will be preloaded to check they exist on the server
+    // with this set to false it it recommended to have a default avatar
+    // in place of the 404 page for your avatars directory
+    "preload_avatars": false,
+
+    // Enables the setting of account avatars
+    "set_avatars": true,
+},
+"plugin-avatars" : {
+   // URL path to other avatar styles
+   // if not set this to use auto detection
+   "path": "/static/plugins/plugin-avatars/%style%.js",
+
+   // Default avatar style that will be used
+   "style": "micah",
+
+   // Allows specifying options modifiers for the different styles
+  "stylesOptions": {
+   "micah": { "translateY": 5 }
+},
+}
+}
